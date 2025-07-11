@@ -99,18 +99,12 @@ function Header(props) {
                   </li>
                </ul>
                <ul className="navbar-nav float-right">
-                  <li className="nav-item dropdown">
-                     <a
-                        className="nav-link dropdown-toggle"
-                        href="/login"
-                        data-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                     >
+                  <li className="nav-item">
+                     <Link to="/login" className="nav-link">
                         <span className="ml-2 d-none d-lg-inline-block">
                            <span>Login</span>
                         </span>
-                     </a>
+                     </Link>
                   </li>
                   <li className="nav-item dropdown">
                      <a
