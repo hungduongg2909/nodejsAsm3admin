@@ -4,7 +4,11 @@ import ChatRoomsAPI from "../API/ChatRoomsAPI";
 import "./Chat.css";
 
 import io from "socket.io-client";
-const socket = io("http://localhost:5000", { transports: ["websocket"] });
+// const socket = io("http://localhost:5000", { transports: ["websocket"] });
+const socket = io(process.env.REACT_APP_SOCKET_URL, {
+   withCredentials: true,
+   transports: ["websocket"],
+});
 
 function Chat(props) {
    const [allRoom, setAllRoom] = useState([]);
